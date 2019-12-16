@@ -46,10 +46,6 @@ public class LinkedList<T> implements List<T> {
      */
     @Override
     public void add(int index, T element) {
-//        if (index > size || index < 0) {
-//            throw new IndexOutOfBoundsException();
-//        }
-
         Node<T> newNode = new Node<>(element);
         if (index == 0) {
             newNode.next = first;
@@ -71,9 +67,6 @@ public class LinkedList<T> implements List<T> {
      */
     @Override
     public void set(int index, T element) {
-//        if (index > size - 1 || index < 0) {
-//            throw new IndexOutOfBoundsException();
-//        }
         findNode(index).value = element;
     }
 
@@ -86,9 +79,6 @@ public class LinkedList<T> implements List<T> {
      */
     @Override
     public T get(int index) {
-//        if (index > size - 1 || index < 0) {
-//            throw new IndexOutOfBoundsException();
-//        }
         return findNode(index).value;
     }
 
@@ -100,9 +90,6 @@ public class LinkedList<T> implements List<T> {
      */
     @Override
     public void remove(int index) {
-//        if (index > size - 1 || index < 0) {
-//            throw new IndexOutOfBoundsException();
-//        }
         if (index == 0) {
             Objects.checkIndex(index, size);
             first = first.next;
@@ -121,10 +108,6 @@ public class LinkedList<T> implements List<T> {
      */
     @Override
     public boolean contains(T element) {
-//        if (isEmpty()) {
-//            return false;
-//        }
-
         Node<T> node = first;
         while (node != null) {
             if (node.value.equals(element)) {

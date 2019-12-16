@@ -26,7 +26,7 @@ public class FileStats {
     private FileStats(String fileName) {
         Path path = getFilePath(fileName);
         characterCountMap = getCharacterCountMap(path);
-        mostPopularCharacter = findMostPopularCharacter(path);
+        mostPopularCharacter = findMostPopularCharacter();
     }
 
     private Path getFilePath(String fileName) {
@@ -62,7 +62,7 @@ public class FileStats {
                 .collect(groupingBy(identity(), counting()));
     }
 
-    private char findMostPopularCharacter(Path file) {
+    private char findMostPopularCharacter() {
         return characterCountMap.entrySet()
                 .stream()
                 .max(Comparator.comparing(Map.Entry::getValue))

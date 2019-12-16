@@ -9,7 +9,8 @@ package com.robosh;
  */
 public class LinkedQueue<T> implements Queue<T> {
 
-    private Node<T> first, last;
+    private Node<T> first;
+    private Node<T> last;
     private int size;
 
     /**

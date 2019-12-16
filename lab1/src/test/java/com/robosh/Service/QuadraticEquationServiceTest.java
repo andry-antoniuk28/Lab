@@ -1,4 +1,4 @@
-package com.robosh.Service;
+package com.robosh.service;
 
 import com.robosh.entity.QuadraticEquation;
 import org.junit.jupiter.api.BeforeAll;
